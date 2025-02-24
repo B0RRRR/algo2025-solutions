@@ -1,7 +1,7 @@
 #include <iostream>
 
-int Sum(int a, int b) {
-    int result = a + b;
+int64_t Sum(int64_t a, int64_t b) {
+    int64_t result = a + b;
     if (result > std::numeric_limits<int>::max()) {
         return std::numeric_limits<int>::max();
     }
