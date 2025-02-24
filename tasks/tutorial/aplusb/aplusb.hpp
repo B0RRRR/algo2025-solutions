@@ -1,5 +1,10 @@
 #include <iostream>
 
-int64_t Sum(int a, int b) {
-    return a + b;
+int Sum(int a, int b) {
+    int result = a + b;
+    if (result > std::numeric_limits<int>::max())
+        return std::numeric_limits<int>::max();
+    if (result < std::numeric_limits<int>::min())
+        return std::numeric_limits<int>::min();
+    return result;
 }
