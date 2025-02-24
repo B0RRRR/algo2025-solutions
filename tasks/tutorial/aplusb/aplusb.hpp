@@ -1,5 +1,5 @@
 #include <iostream>
 
-int Sum(int /*a*/, int /*b*/) {
-    std::abort();  // Not implemented.
+int Sum(int a, int b) {
+    return a + b;
 }
