@@ -7,15 +7,15 @@
 
 - group:    Bash
   start:    24-02-2025 12:00
-  deadline: 02-03-2025 23:59
+  deadline: 03-03-2025 23:59
   tasks:
     - task: bash/bash
       score: 150
 
 # Iterators and Templates. Classes
 - group:    Lists
-  start:    10-03-2025 12:00
-  deadline: 31-03-2025 23:59
+  start:    17-03-2025 12:00
+  deadline: 07-04-2025 23:59
   tasks:
     - task: lists/list
       score: 200
@@ -24,8 +24,8 @@
 
 # Smart Pointers
 - group:    Tree
-  start:    24-03-2025 21:00
-  deadline: 12-04-2025 23:59
+  start:    31-03-2025 21:00
+  deadline: 14-04-2025 23:59
   tasks:
     - task: tree/bst
       score: 300
