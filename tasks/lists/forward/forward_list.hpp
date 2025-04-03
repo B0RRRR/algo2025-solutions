@@ -229,7 +229,8 @@ private:
 
 namespace std {
 template <typename T>
-void Swap(ForwardList<T>& a, ForwardList<T>& b) {
+// NOLINTNEXTLINE
+void swap(ForwardList<T>& a, ForwardList<T>& b) {
     a.Swap(b);
 }
 }  // namespace std
