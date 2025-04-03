@@ -211,6 +211,7 @@ public:
         if (!head_) {
             throw ListIsEmptyException("List is empty");
         }
+        // Node -> begin
         Node* temp = head_;
         head_ = head_->next_;
         delete temp;
