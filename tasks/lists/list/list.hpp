@@ -23,17 +23,22 @@ private:
         Node* prev_;
         Node* next_;
 
-        Node(const T& value, Node* p = nullptr, Node* n = nullptr) : data_(value), prev_(p), next_(n) {
+        explicit Node(const T& value, Node* p = nullptr, Node* n = nullptr) : data_(value), prev_(p), next_(n) {
         }
     };
 
 public:
     class ListIterator {
     public:
+        // NOLINTNEXTLINE
         using value_type = T;
+        // NOLINTNEXTLINE
         using reference_type = value_type&;
+        // NOLINTNEXTLINE
         using pointer_type = value_type*;
+        // NOLINTNEXTLINE
         using difference_type = std::ptrdiff_t;
+        // NOLINTNEXTLINE
         using iterator_category = std::bidirectional_iterator_tag;
 
         inline bool operator==(const ListIterator& other) const {
@@ -281,7 +286,8 @@ private:
 
 namespace std {
 template <typename T>
-void Swap(List<T>& a, List<T>& b) {
+// NOLINTNEXTLINE
+void swap(List<T>& a, List<T>& b) {
     a.Swap(b);
 }
 }  // namespace std
