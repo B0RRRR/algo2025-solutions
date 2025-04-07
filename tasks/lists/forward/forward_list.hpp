@@ -1,5 +1,3 @@
-#pragma once
-
 #include <fmt/core.h>
 
 #include <cstdlib>
@@ -151,9 +149,11 @@ public:
     inline T& Front() const {
         return head_->data_;
     }
+
     inline bool IsEmpty() const noexcept {
         return head_ == nullptr;
     }
+
     inline size_t Size() const noexcept {
         return size_;
     }
