@@ -255,7 +255,7 @@ public:
             PushBack(value);
             return;
         }
-
+        // New node
         Node* new_node = new Node(value, pos.current_->prev_, pos.current_);
         if (pos.current_->prev_) {
             pos.current_->prev_->next_ = new_node;
