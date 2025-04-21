@@ -8,7 +8,19 @@
 #include <utility>
 #include <vector>
 
-#include "exceptions.hpp"
+class MapIsEmptyException : public std::exception {
+public:
+    explicit MapIsEmptyException(const std::string& text) : error_message_(text) {
+    }
+
+    const char* what() const noexcept override {
+        return error_message_.c_str();
+    }
+
+private:
+    std::string error_message_;
+};
+
 template <typename Key, typename Value, typename Compare = std::less<Key>>
 class Map {
 public:
