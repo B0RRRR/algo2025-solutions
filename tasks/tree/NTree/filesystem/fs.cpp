@@ -22,6 +22,7 @@ Fs::~Fs() {
         }
         delete dir;
     };
+
     // fix
     destroy(root_);
 }
@@ -119,6 +120,7 @@ void Fs::MakeDir(const std::string& path, bool is_create_parents) {
             dir = new_dir;
         }
     }
+
 }
 
 auto Fs::Split(const std::string& str, const std::string& splitter) const -> std::vector<std::string> {
@@ -238,6 +240,7 @@ void Fs::CreateFile(const std::string& path, bool is_overwrite) {
 }
 
 void Fs::WriteToFile(const std::string& path, bool is_overwrite, std::ostringstream& stream) {
+
     if (path.empty()) {
         return;
     }
@@ -247,7 +250,9 @@ void Fs::WriteToFile(const std::string& path, bool is_overwrite, std::ostringstr
         return;
     }
 
+
     std::string filename = parts.back();
+
     parts.pop_back();
 
     Directory* dir = (path[0] == '/') ? root_ : current_;
@@ -258,6 +263,7 @@ void Fs::WriteToFile(const std::string& path, bool is_overwrite, std::ostringstr
         }
         if (part == "..") {
             if (dir->parent_ != nullptr) {
+
                 dir = dir->parent_;
             }
         } else {
@@ -281,6 +287,7 @@ void Fs::WriteToFile(const std::string& path, bool is_overwrite, std::ostringstr
 }
 
 void Fs::ShowFileContent(const std::string& path) {
+
     if (path.empty()) {
         return;
     }
@@ -301,6 +308,7 @@ void Fs::ShowFileContent(const std::string& path) {
         }
         if (part == "..") {
             if (dir->parent_) {
+
                 dir = dir->parent_;
             }
         } else {
@@ -311,10 +319,12 @@ void Fs::ShowFileContent(const std::string& path) {
         }
     }
 
+
     if (!dir->files_.Find(filename)) {
         throw FileNotFoundException("File not found: " + filename);
     }
 }
+
 
 void Fs::FindFile(const std::string& filename) {
     bool found = false;
