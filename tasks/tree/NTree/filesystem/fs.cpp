@@ -16,7 +16,6 @@ Fs::Fs() {
 }
 
 Fs::~Fs() {
-    // fix
     std::function<void(Directory*)> destroy = [&](Directory* dir) {
         for (const auto& [_, child] : dir->childs_.Values()) {
             destroy(child);
