@@ -120,7 +120,6 @@ void Fs::MakeDir(const std::string& path, bool is_create_parents) {
             dir = new_dir;
         }
     }
-
 }
 
 auto Fs::Split(const std::string& str, const std::string& splitter) const -> std::vector<std::string> {
@@ -250,7 +249,6 @@ void Fs::WriteToFile(const std::string& path, bool is_overwrite, std::ostringstr
         return;
     }
 
-
     std::string filename = parts.back();
 
     parts.pop_back();
@@ -319,12 +317,10 @@ void Fs::ShowFileContent(const std::string& path) {
         }
     }
 
-
     if (!dir->files_.Find(filename)) {
         throw FileNotFoundException("File not found: " + filename);
     }
 }
-
 
 void Fs::FindFile(const std::string& filename) {
     bool found = false;
