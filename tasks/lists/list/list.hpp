@@ -103,6 +103,7 @@ public:
     }
 
     explicit List(size_t sz) : List() {
+        // fix
         for (size_t i = 0; i < sz; ++i) {
             PushBack(T());
         }
