@@ -9,6 +9,7 @@
 namespace filesystem {
 
 class Directory {
+    // fix
     friend class Fs;
 
     std::string GetName() const;

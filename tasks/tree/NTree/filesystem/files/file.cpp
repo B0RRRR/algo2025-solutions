@@ -9,6 +9,7 @@ void File::Read(size_t bytes) const {
 }
 
 void File::Write() {
+    // fix
     content_.clear();
     std::string line;
     while (std::getline(std::cin, line)) {

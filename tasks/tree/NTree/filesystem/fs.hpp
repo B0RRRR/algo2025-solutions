@@ -12,6 +12,7 @@ class Directory;
 
 class Fs {
 public:
+    // fix
     Fs();
     ~Fs();
     void ChangeDir(const std::string& path);

@@ -22,7 +22,7 @@ Fs::~Fs() {
         }
         delete dir;
     };
-
+    // fix
     destroy(root_);
 }
 

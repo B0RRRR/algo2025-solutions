@@ -10,7 +10,7 @@ class File {
 public:
     void Read(size_t bytes) const;
 
-    // overwrite
+    // overwrite fix
     void Write();
 
     void Append();
