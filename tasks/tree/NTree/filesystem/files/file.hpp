@@ -5,16 +5,18 @@
 namespace filesystem {
 
 class File {
-public:
-    void Read(size_t /*bytes*/) const;
+    friend class Fs;
 
-    // overwrite
+public:
+    void Read(size_t bytes) const;
+
+    // overwrite fix
     void Write();
 
     void Append();
 
 private:
-    std::string content;
+    std::string content_;
 };
 
 }  // end namespace filesystem
