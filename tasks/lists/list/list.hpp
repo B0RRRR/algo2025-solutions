@@ -22,7 +22,7 @@ private:
         T data_;
         Node* prev_;
         Node* next_;
-
+        // fix
         explicit Node(const T& value, Node* p = nullptr, Node* n = nullptr) : data_(value), prev_(p), next_(n) {
         }
     };
